@@ -8,7 +8,7 @@ A modern Web3-enabled pharmaceutical supply chain dashboard built with React, Ty
 
 ## 🚀 Live Demo
 
-🌐 [Launch the App](https://pharmachain.replit.app)
+🌐 [Launch the App](https://blockchain-pharma-track-stefan259.replit.app/)
 
 ---
 
@@ -43,7 +43,7 @@ A modern Web3-enabled pharmaceutical supply chain dashboard built with React, Ty
 > 🔒 MetaMask wallet-connected workflow  
 > 📊 Quality test insights + compliance
 
-*(Add screenshots here)*
+![](https://github.com/stefanjames/secure-pharma-tracker/blob/main/pharma-chain-dashboard.png)
 
 ---
 
