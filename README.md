@@ -43,7 +43,7 @@ A modern Web3-enabled pharmaceutical supply chain dashboard built with React, Ty
 > 🔒 MetaMask wallet-connected workflow  
 > 📊 Quality test insights + compliance
 
-![](https://github.com/stefanjames/secure-pharma-tracker/blob/main/pharma-chain-dashboard.png)
+![](https://github.com/stefanjames/secure-pharma-tracker/blob/main/pharma-chain-main-dashboard.png)
 
 ---
 
