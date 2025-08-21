@@ -1,0 +1,56 @@
+name: security-lite
+on: [push, pull_request]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write     # needed to upload SARIF
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # --- Secrets scanning (repo + history)
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: detect --source . --no-banner --redact --exit-code 1
+
+      # --- SAST for JS/TS/Solidity (Semgrep)
+      - name: Semgrep scan
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: >
+            p/ci
+            p/javascript
+            p/typescript
+            p/solidity
+          generateSarif: true
+          uploadSarif: true
+
+      # --- Dependency checks (fast + non-blocking to avoid noise)
+      - name: Use Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install client deps
+        if: hashFiles('client/package.json') != ''
+        working-directory: client
+        run: npm ci
+
+      - name: Install server deps
+        if: hashFiles('server/package.json') != ''
+        working-directory: server
+        run: npm ci
+
+      - name: npm audit (client)
+        if: hashFiles('client/package.json') != ''
+        working-directory: client
+        run: npm audit --audit-level=high || true
+
+      - name: npm audit (server)
+        if: hashFiles('server/package.json') != ''
+        working-directory: server
+        run: npm audit --audit-level=high || true
