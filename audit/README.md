@@ -8,7 +8,7 @@ This folder contains all security-related assessments and audit documentation fo
 
 | File | Description |
 |------|-------------|
-| [`frontend-security-assessment.md`](./frontend-security-assessment.md) | AI-assisted manual audit of the frontend |
+| [`security-assessment-report.md`](./security-assessment-report.md) | AI-assisted manual audit of the frontend |
 | [`ai-prompts-used.md`](./ai-prompts-used.md) | Prompts used to guide the frontend security assessment |
 | [`smart-contract-audit.md`](./smart-contract-audit.md) | Coming soon – Solidity vulnerability review + gas analysis |
 
