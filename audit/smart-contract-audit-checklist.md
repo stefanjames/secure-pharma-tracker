@@ -110,6 +110,26 @@ When tool-based analysis fails:
 
 ---
 
+## 📚 SWC ID Reference Table
+
+| SWC ID | Title                                 | Link |
+|--------|---------------------------------------|------|
+| SWC-101 | Integer Overflow/Underflow           | [View](https://swcregistry.io/docs/SWC-101) |
+| SWC-104 | Unchecked Call Return Value          | [View](https://swcregistry.io/docs/SWC-104) |
+| SWC-105 | Unprotected Critical Function        | [View](https://swcregistry.io/docs/SWC-105) |
+| SWC-107 | Reentrancy                           | [View](https://swcregistry.io/docs/SWC-107) |
+| SWC-110 | Assert Violation                     | [View](https://swcregistry.io/docs/SWC-110) |
+| SWC-112 | Delegatecall to Untrusted Contract   | [View](https://swcregistry.io/docs/SWC-112) |
+| SWC-113 | DoS with Failed Call                 | [View](https://swcregistry.io/docs/SWC-113) |
+| SWC-119 | Shadowing State Variables            | [View](https://swcregistry.io/docs/SWC-119) |
+| SWC-122 | Lack of Input Validation             | [View](https://swcregistry.io/docs/SWC-122) |
+| SWC-123 | Requirement Violation                | [View](https://swcregistry.io/docs/SWC-123) |
+| SWC-128 | DoS via Block Gas Limit              | [View](https://swcregistry.io/docs/SWC-128) |
+| SWC-135 | Code With No Effects                 | [View](https://swcregistry.io/docs/SWC-135) |
+| SWC-136 | Unencrypted Event Logging            | [View](https://swcregistry.io/docs/SWC-136) |
+
+---
+
 **Checklist Version**: v1.1  
 **Last Updated**: September 2025  
 **Maintained By**: Stefan James, James Consulting Group LLC
