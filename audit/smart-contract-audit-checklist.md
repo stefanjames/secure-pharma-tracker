@@ -69,3 +69,48 @@ This checklist provides a structured guide for reviewing smart contracts for sec
 
 **AI Prompt:**
 > "Review the smart contract for missing event emissions. Recommend logs for state changes
+
+---
+
+## 🧪 Testing & Fuzzing
+
+- [ ] All public/external functions are covered by unit tests
+- [ ] Revert conditions and access control are tested
+- [ ] Fuzz tests or property-based tests applied to core logic
+- [ ] Invariants are verified where applicable (e.g., totals must always match)
+
+**Tools**: Foundry (`forge test`, `forge fuzz`), Hardhat + Chai/Waffle
+
+**AI Prompt:**
+> "Generate unit tests and fuzzing cases for this contract’s external functions using Foundry or Hardhat."
+
+---
+
+## ⚙️ Compiler & Optimization Review
+
+- [ ] Compiler version specified and >= `0.8.x`
+- [ ] Optimizer enabled in Hardhat config (`enabled: true, runs: 200`)
+- [ ] Stack-too-deep handled via `--via-ir` or function refactor
+
+**Note**: If Slither or solc fail due to stack depth, document it in the audit report and fallback to manual/AI review.
+
+**AI Prompt:**
+> "Refactor this Solidity function to avoid the stack-too-deep error while preserving functionality."
+
+---
+
+## 🤖 AI Audit Fallback Coverage
+
+When tool-based analysis fails:
+
+- [ ] Entire contract reviewed in Cursor or ChatGPT with security-focused prompt
+- [ ] AI flagged reentrancy, access control, and validation risks
+- [ ] AI-suggested refactors and logic improvements applied and tested
+- [ ] Summary of AI findings documented in audit report
+
+---
+
+**Checklist Version**: v1.1  
+**Last Updated**: September 2025  
+**Maintained By**: Stefan James, James Consulting Group LLC
+
