@@ -168,12 +168,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**Project Developer** - [Your Name]
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+**Project Developer** - [Stefan James]
+- GitHub: [@stefanjames](https://github.com/stefanjames)
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/stefan-james/)
 
-**Project Link** - [https://github.com/yourusername/pharmachain](https://github.com/yourusername/pharmachain)
+**Project Link** - [https://github.com/stefanjames/secure-pharma-tracker](https://github.com/stefanjames/secure-pharma-tracker)
 
 **Live Demo** - [https://pharmachain.replit.app](https://pharmachain.replit.app)
 
