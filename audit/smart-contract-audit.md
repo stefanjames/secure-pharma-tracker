@@ -1,4 +1,4 @@
-# 🔐 Smart Contract Audit Report – Secure Pharma Tracker
+# 🔐 Smart Contract Audit Report – PharmaChain
 ---
 
 ## 📌 Overview
