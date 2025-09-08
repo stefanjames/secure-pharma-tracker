@@ -1,4 +1,4 @@
-# 🔐 Web3 DApp Security Assessment – Pharma Supply Chain Tracker
+# 🔐 Security Assessment – Pharma Supply Chain Tracker
 
 This document consolidates the **critical Web3 frontend security checks** and the **results** of the security assessment performed on the **Pharma Supply Chain DApp**.  
 
