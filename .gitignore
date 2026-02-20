@@ -31,6 +31,3 @@ frontend/tsconfig.tsbuildinfo
 
 # Ignition deployments (local state)
 contracts/ignition/deployments/
-
-# Screenshots (local testing)
-screenshots/

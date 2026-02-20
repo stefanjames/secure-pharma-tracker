@@ -2,6 +2,12 @@
 
 An Ethereum-based decentralized application for tracking pharmaceutical batches from manufacture through quality assurance to regulatory approval. Built with Solidity, React, TypeScript, and Hardhat.
 
+### Landing Page
+![PharmaChain Landing Page](screenshots/landing_page.png)
+
+### Dashboard
+![PharmaChain Dashboard](screenshots/dashboard.png)
+
 ---
 
 ## The Problem
@@ -105,7 +111,7 @@ PharmaChain records every batch lifecycle event on Ethereum, creating an **immut
 ## Frontend Application
 
 ### Landing Page
-A Railway.com-inspired landing page with animated network canvas, interactive demo explorer, step-by-step workflow visualization, and role cards — displayed when no wallet is connected.
+An animated landing page with network canvas, interactive demo explorer, step-by-step workflow visualization, and role cards — displayed when no wallet is connected.
 
 ### Dashboard
 After connecting MetaMask, users see a unified dashboard with:
