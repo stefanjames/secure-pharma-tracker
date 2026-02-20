@@ -1,0 +1,20 @@
+{
+  "name": "pharma-chain-dapp",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "frontend"
+  ],
+  "scripts": {
+    "compile": "npm run compile --workspace=contracts",
+    "test": "npm run test --workspace=contracts",
+    "deploy:local": "npm run deploy:local --workspace=contracts",
+    "deploy:sepolia": "npm run deploy:sepolia --workspace=contracts",
+    "node": "npm run node --workspace=contracts",
+    "grant-roles": "npm run grant-roles --workspace=contracts",
+    "generate-frontend-config": "npm run generate-frontend-config --workspace=contracts",
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend"
+  }
+}

@@ -1,0 +1,36 @@
+node_modules/
+dist/
+build/
+cache/
+artifacts/
+typechain-types/
+coverage/
+coverage.json
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hardhat
+contracts/cache/
+contracts/artifacts/
+contracts/typechain-types/
+
+# Frontend
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# Ignition deployments (local state)
+contracts/ignition/deployments/
+
+# Screenshots (local testing)
+screenshots/
