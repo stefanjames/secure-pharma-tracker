@@ -1,5 +1,14 @@
 # PharmaChain dApp - Comprehensive Overview
 
+## Quick Overview
+
+PharmaChain is a full-stack dApp that tracks pharmaceutical batches from manufacturer to patient using role-based access control and immutable on-chain event logging. I built it to explore how smart contract architecture can solve real supply chain transparency problems and to understand the security surface area of multi-rolepermissioned systems.  
+
+## Security Focus:
+
+This project is my way of learning blockchain security from the builder's side understanding vulnerabilities like reentrancy, access control gaps, and input
+validation by writing the contracts myself and auditing them against real checklists like SWC and the Solidity security best practices.
+
 ## What PharmaChain Is
 
 PharmaChain is a **blockchain-based pharmaceutical supply chain tracking system** built on Ethereum. It creates an immutable, transparent audit trail for drug batches as they move from manufacturer to quality approval (or rejection/recall).
