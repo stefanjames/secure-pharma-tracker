@@ -81,7 +81,7 @@ export function RoleCards() {
           <h2 className="text-3xl md:text-4xl font-bold">
             Built for Every Role
           </h2>
-          <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             Role-based access control ensures each participant sees exactly what
             they need
           </p>
@@ -102,7 +102,7 @@ export function RoleCards() {
               />
 
               <div
-                className={`relative rounded-xl border ${role.border} bg-gray-900/80 backdrop-blur-sm p-6 h-full transition-colors`}
+                className={`relative rounded-xl border ${role.border} bg-white backdrop-blur-sm p-6 h-full transition-colors dark:bg-gray-900/80`}
               >
                 <div
                   className={`w-12 h-12 rounded-xl ${role.iconBg} flex items-center justify-center mb-4`}
@@ -116,7 +116,7 @@ export function RoleCards() {
                   {role.abilities.map((ability) => (
                     <li
                       key={ability}
-                      className="flex items-start gap-2 text-sm text-gray-400"
+                      className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"
                     >
                       <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${role.iconBg} shrink-0`} />
                       {ability}

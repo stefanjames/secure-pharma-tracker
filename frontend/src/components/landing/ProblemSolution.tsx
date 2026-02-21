@@ -75,11 +75,11 @@ function AnimatedCard({
       className="flex gap-4"
     >
       <div className="shrink-0 mt-1">
-        <Icon className="h-5 w-5 text-emerald-400" />
+        <Icon className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
       </div>
       <div>
-        <h4 className="font-semibold text-white">{title}</h4>
-        <p className="text-sm text-gray-400 mt-1 leading-relaxed">
+        <h4 className="font-semibold text-gray-900 dark:text-white">{title}</h4>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
           {description}
         </p>
       </div>
@@ -105,7 +105,7 @@ export function ProblemSolution() {
             The pharmaceutical supply chain is{" "}
             <span className="text-red-400">broken</span>
           </h2>
-          <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             Traditional tracking systems leave critical gaps that put patients at
             risk
           </p>
@@ -126,7 +126,7 @@ export function ProblemSolution() {
 
           {/* Solution side */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-medium uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-600/20 bg-emerald-500/5 text-emerald-700 dark:text-emerald-400 dark:border-emerald-500/20 text-xs font-medium uppercase tracking-wider">
               PharmaChain Solution
             </div>
             <div className="space-y-6">

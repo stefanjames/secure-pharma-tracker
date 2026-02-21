@@ -365,8 +365,8 @@ export function DashboardHome({
       description: "Browse and manage existing batches",
       icon: BarChart3,
       gradient: "from-gray-500/10 to-gray-500/5",
-      border: "border-gray-800/60 hover:border-gray-700",
-      iconColor: "text-gray-400 bg-gray-800",
+      border: "border-gray-200 hover:border-gray-300 dark:border-gray-800/60 dark:hover:border-gray-700",
+      iconColor: "text-gray-500 bg-gray-200 dark:text-gray-400 dark:bg-gray-800",
       cta: "View",
       visible: true,
     },
@@ -376,8 +376,8 @@ export function DashboardHome({
       description: "Add or review quality test results",
       icon: FlaskConical,
       gradient: "from-gray-500/10 to-gray-500/5",
-      border: "border-gray-800/60 hover:border-gray-700",
-      iconColor: "text-gray-400 bg-gray-800",
+      border: "border-gray-200 hover:border-gray-300 dark:border-gray-800/60 dark:hover:border-gray-700",
+      iconColor: "text-gray-500 bg-gray-200 dark:text-gray-400 dark:bg-gray-800",
       cta: "View",
       visible: roles.isTester || roles.isRegulator || roles.isAdmin,
     },
@@ -392,7 +392,7 @@ export function DashboardHome({
       <div className="flex items-start justify-between">
         <div>
           <h2 className="text-3xl font-bold">Welcome back</h2>
-          <p className="text-gray-400 mt-1">
+          <p className="text-gray-600 dark:text-gray-400 mt-1">
             Managing pharmaceutical supply chain as{" "}
             <span className="font-medium text-emerald-400">
               {getRoleName(roles)}
@@ -400,8 +400,8 @@ export function DashboardHome({
           </p>
         </div>
         <div className="text-right text-sm hidden sm:block">
-          <p className="text-gray-500">Today</p>
-          <p className="font-medium text-gray-300">{dateStr}</p>
+          <p className="text-gray-600 dark:text-gray-500">Today</p>
+          <p className="font-medium text-gray-600 dark:text-gray-300">{dateStr}</p>
         </div>
       </div>
 
@@ -413,16 +413,16 @@ export function DashboardHome({
             <div
               className={`absolute -inset-0.5 rounded-xl bg-gradient-to-b ${s.gradient} opacity-0 group-hover:opacity-100 blur-sm transition-opacity`}
             />
-            <div className="relative rounded-xl border border-gray-800/60 bg-gray-900/50 backdrop-blur-sm p-5">
+            <div className="relative rounded-xl border border-gray-200 bg-white backdrop-blur-sm p-5 dark:border-gray-800/60 dark:bg-gray-900/50">
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">
+                  <p className="text-xs text-gray-600 dark:text-gray-500 font-medium uppercase tracking-wider">
                     {s.label}
                   </p>
-                  <p className="text-3xl font-bold mt-1 text-white">
+                  <p className="text-3xl font-bold mt-1 text-gray-900 dark:text-white">
                     {loading ? "-" : s.value}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">{s.sub}</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-500 mt-1">{s.sub}</p>
                 </div>
                 <div className={`rounded-xl p-2.5 ${s.iconColor}`}>
                   <s.icon className="h-5 w-5" />
@@ -451,15 +451,15 @@ export function DashboardHome({
                     className={`absolute -inset-0.5 rounded-xl bg-gradient-to-b ${action.gradient} opacity-0 group-hover:opacity-100 blur-sm transition-opacity`}
                   />
                   <div
-                    className={`relative rounded-xl border ${action.border} bg-gray-900/50 backdrop-blur-sm p-5 h-full transition-colors`}
+                    className={`relative rounded-xl border ${action.border} bg-white backdrop-blur-sm p-5 h-full transition-colors dark:bg-gray-900/50`}
                   >
                     <div className={`rounded-xl p-3 w-fit mb-3 ${action.iconColor}`}>
                       <action.icon className="h-5 w-5" />
                     </div>
-                    <h4 className="font-semibold text-sm text-white">
+                    <h4 className="font-semibold text-sm text-gray-900 dark:text-white">
                       {action.label}
                     </h4>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-600 dark:text-gray-500 mt-1">
                       {action.description}
                     </p>
                     <span className="flex items-center gap-1 text-xs text-emerald-400 font-medium mt-3">
@@ -473,7 +473,7 @@ export function DashboardHome({
           </div>
 
           {/* Getting Started */}
-          <div className="rounded-xl border border-gray-800/60 bg-gray-900/50 backdrop-blur-sm p-5">
+          <div className="rounded-xl border border-gray-200 bg-white backdrop-blur-sm p-5 dark:border-gray-800/60 dark:bg-gray-900/50">
             <button
               className="flex items-center justify-between w-full"
               onClick={() => setGettingStartedOpen(!gettingStartedOpen)}
@@ -483,16 +483,16 @@ export function DashboardHome({
                   <CheckCircle2 className="h-5 w-5 text-emerald-400" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-sm text-white">
+                  <h4 className="font-semibold text-sm text-gray-900 dark:text-white">
                     Getting Started
                   </h4>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-600 dark:text-gray-500">
                     {completedCount} of {GETTING_STARTED_STEPS.length} completed
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-24 h-1.5 bg-gray-800 rounded-full hidden sm:block">
+                <div className="w-24 h-1.5 bg-gray-200 dark:bg-gray-800 rounded-full hidden sm:block">
                   <div
                     className="h-full bg-emerald-500 rounded-full transition-all"
                     style={{
@@ -519,7 +519,7 @@ export function DashboardHome({
                         <Circle className="h-4 w-4 text-gray-600 shrink-0" />
                       )}
                       <span
-                        className={`text-sm ${done ? "text-gray-500 line-through" : "text-gray-300"}`}
+                        className={`text-sm ${done ? "text-gray-600 dark:text-gray-500 line-through" : "text-gray-600 dark:text-gray-300"}`}
                       >
                         {step.label}
                       </span>
@@ -536,15 +536,15 @@ export function DashboardHome({
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-bold">Recent Activity</h3>
             <button
-              className="text-xs text-gray-500 hover:text-gray-300 flex items-center gap-1 border border-gray-800 rounded-lg px-2.5 py-1 transition-colors"
+              className="text-xs text-gray-500 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 flex items-center gap-1 border border-gray-200 dark:border-gray-800 rounded-lg px-2.5 py-1 transition-colors"
               onClick={() => onNavigate("search")}
             >
               View All <ChevronRight className="h-3 w-3" />
             </button>
           </div>
-          <div className="rounded-xl border border-gray-800/60 bg-gray-900/50 backdrop-blur-sm p-4">
+          <div className="rounded-xl border border-gray-200 bg-white backdrop-blur-sm p-4 dark:border-gray-800/60 dark:bg-gray-900/50">
             {recentEvents.length === 0 ? (
-              <p className="text-sm text-gray-500 text-center py-8">
+              <p className="text-sm text-gray-600 dark:text-gray-500 text-center py-8">
                 No activity yet. Events will appear here as batches are created
                 and updated.
               </p>
@@ -553,23 +553,23 @@ export function DashboardHome({
                 {recentEvents.map((ev) => (
                   <div
                     key={ev.id}
-                    className="flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-gray-800/30 transition-colors"
+                    className="flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800/30 transition-colors"
                   >
                     <div
                       className={`rounded-lg p-1.5 mt-0.5 shrink-0 ${
                         ev.type === "created"
                           ? "bg-emerald-500/10"
-                          : "bg-gray-800"
+                          : "bg-gray-200 dark:bg-gray-800"
                       }`}
                     >
                       {ev.type === "created" ? (
                         <Package className="h-3.5 w-3.5 text-emerald-400" />
                       ) : (
-                        <TrendingUp className="h-3.5 w-3.5 text-gray-400" />
+                        <TrendingUp className="h-3.5 w-3.5 text-gray-600 dark:text-gray-400" />
                       )}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-200">
+                      <p className="text-sm font-medium text-gray-700 dark:text-gray-200">
                         {ev.description}
                       </p>
                       <div className="flex items-center gap-2 mt-0.5">

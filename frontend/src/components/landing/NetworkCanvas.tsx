@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "@/hooks/useTheme";
 
 interface Node {
   x: number;
@@ -9,6 +10,7 @@ interface Node {
 
 export function NetworkCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -62,6 +64,10 @@ export function NetworkCanvas() {
         }
       }
 
+      // Adjust alpha based on theme — higher in light mode for visibility
+      const lineAlphaBase = theme === "dark" ? 0.15 : 0.25;
+      const nodeAlpha = theme === "dark" ? 0.3 : 0.5;
+
       // Draw connections
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
@@ -69,7 +75,7 @@ export function NetworkCanvas() {
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < CONNECT_DIST) {
-            const alpha = (1 - dist / CONNECT_DIST) * 0.15;
+            const alpha = (1 - dist / CONNECT_DIST) * lineAlphaBase;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -84,7 +90,7 @@ export function NetworkCanvas() {
       for (const n of nodes) {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(52, 211, 153, 0.3)";
+        ctx.fillStyle = `rgba(52, 211, 153, ${nodeAlpha})`;
         ctx.fill();
       }
 
@@ -103,7 +109,7 @@ export function NetworkCanvas() {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas

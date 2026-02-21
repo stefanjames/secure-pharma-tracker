@@ -145,11 +145,11 @@ export function DemoExplorer({ onConnect }: { onConnect: () => void }) {
           <h2 className="text-3xl md:text-4xl font-bold">
             Try It — No Wallet Needed
           </h2>
-          <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             Look up a demo batch to see the full supply chain timeline. Try batch
-            IDs <strong className="text-gray-300">1</strong>,{" "}
-            <strong className="text-gray-300">2</strong>, or{" "}
-            <strong className="text-gray-300">3</strong>.
+            IDs <strong className="text-gray-600 dark:text-gray-300">1</strong>,{" "}
+            <strong className="text-gray-600 dark:text-gray-300">2</strong>, or{" "}
+            <strong className="text-gray-600 dark:text-gray-300">3</strong>.
           </p>
         </motion.div>
 
@@ -167,7 +167,7 @@ export function DemoExplorer({ onConnect }: { onConnect: () => void }) {
                 value={searchId}
                 onChange={(e) => setSearchId(e.target.value)}
                 placeholder="Enter batch ID (1, 2, or 3)"
-                className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/25 transition-all"
+                className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/25 transition-all dark:bg-gray-900/50 dark:border-gray-800 dark:text-white"
               />
             </div>
             <button
@@ -188,11 +188,11 @@ export function DemoExplorer({ onConnect }: { onConnect: () => void }) {
             className="mt-10"
           >
             {/* Batch header */}
-            <div className="rounded-xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm p-6 mb-6">
+            <div className="rounded-xl border border-gray-200 bg-white backdrop-blur-sm p-6 mb-6 dark:border-gray-800 dark:bg-gray-900/50">
               <div className="flex items-start justify-between flex-wrap gap-4">
                 <div>
                   <h3 className="text-xl font-bold">{batch.drugName}</h3>
-                  <p className="text-sm text-gray-400 mt-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     Batch #{activeBatch} &middot; {batch.manufacturer}
                   </p>
                 </div>
@@ -222,15 +222,15 @@ export function DemoExplorer({ onConnect }: { onConnect: () => void }) {
                       <step.icon className="h-5 w-5" />
                     </div>
                     {i < batch.timeline.length - 1 && (
-                      <div className="w-0.5 h-12 bg-gray-800" />
+                      <div className="w-0.5 h-12 bg-gray-200 dark:bg-gray-800" />
                     )}
                   </div>
 
                   {/* Content */}
                   <div className="pb-8">
                     <p className="font-semibold text-sm">{step.status}</p>
-                    <p className="text-sm text-gray-400">{step.label}</p>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{step.label}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-500 mt-1">
                       {step.actor} &middot; {step.time}
                     </p>
                   </div>
@@ -241,7 +241,7 @@ export function DemoExplorer({ onConnect }: { onConnect: () => void }) {
         )}
 
         {activeBatch && !batch && (
-          <div className="mt-10 text-center text-gray-400 py-8">
+          <div className="mt-10 text-center text-gray-600 dark:text-gray-400 py-8">
             No batch found. Try IDs 1, 2, or 3.
           </div>
         )}

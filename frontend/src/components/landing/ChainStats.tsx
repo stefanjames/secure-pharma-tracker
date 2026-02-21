@@ -77,7 +77,7 @@ export function ChainStats() {
           <h2 className="text-3xl md:text-4xl font-bold">
             Trusted at Scale
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-gray-600 dark:text-gray-400">
             Real-time on-chain metrics from the PharmaChain network
           </p>
         </motion.div>
@@ -94,15 +94,15 @@ export function ChainStats() {
               {/* Glow on hover */}
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              <div className="relative rounded-xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm p-6 text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+              <div className="relative rounded-xl border border-gray-200 bg-white backdrop-blur-sm p-6 text-center dark:border-gray-800 dark:bg-gray-900/50">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-transparent">
                   <AnimatedCounter
                     target={stat.value}
                     suffix={stat.suffix}
                     isInView={isInView}
                   />
                 </div>
-                <p className="mt-2 text-sm text-gray-400">{stat.label}</p>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{stat.label}</p>
               </div>
             </motion.div>
           ))}

@@ -9,9 +9,9 @@ const icons = {
 };
 
 const styles = {
-  success: "border-emerald-500/30 bg-emerald-950/80 text-emerald-300",
-  error: "border-red-500/30 bg-red-950/80 text-red-300",
-  info: "border-blue-500/30 bg-blue-950/80 text-blue-300",
+  success: "border-emerald-500/30 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300",
+  error: "border-red-500/30 bg-red-50 text-red-800 dark:bg-red-950/80 dark:text-red-300",
+  info: "border-blue-500/30 bg-blue-50 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300",
 };
 
 function ToastItem({ toast }: { toast: Toast }) {

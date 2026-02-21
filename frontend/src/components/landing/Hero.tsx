@@ -16,7 +16,7 @@ export function Hero({ onConnect }: Props) {
       <NetworkCanvas />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-gray-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#f0f1f3]/50 to-[#f0f1f3] dark:via-gray-950/50 dark:to-gray-950 pointer-events-none" />
 
       {/* Radial glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
@@ -27,7 +27,7 @@ export function Hero({ onConnect }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-emerald-600/20 bg-emerald-500/5 text-emerald-700 dark:text-emerald-400 dark:border-emerald-500/20 text-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             Secured by Ethereum
           </div>
@@ -40,7 +40,7 @@ export function Hero({ onConnect }: Props) {
           className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]"
         >
           Pharmaceutical Supply Chain.{" "}
-          <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-transparent">
             Verified On-Chain.
           </span>
         </motion.h1>
@@ -49,7 +49,7 @@ export function Hero({ onConnect }: Props) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
+          className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
         >
           Track drug batches from manufacturer to patient with tamper-proof
           blockchain transparency
@@ -73,7 +73,7 @@ export function Hero({ onConnect }: Props) {
           </button>
           <button
             onClick={scrollToDemo}
-            className="flex items-center gap-2 px-8 py-3.5 border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white rounded-lg transition-all"
+            className="flex items-center gap-2 px-8 py-3.5 border border-gray-300 hover:border-gray-400 text-gray-600 hover:text-gray-900 dark:border-gray-700 dark:hover:border-gray-500 dark:text-gray-300 dark:hover:text-white rounded-lg transition-all"
           >
             View Demo
           </button>

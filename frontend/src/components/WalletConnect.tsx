@@ -26,12 +26,12 @@ export function WalletConnect({
       {error && <span className="text-sm text-red-400">{error}</span>}
       {isConnected ? (
         <div className="flex items-center gap-2">
-          <span className="rounded-lg border border-gray-800 bg-gray-900/50 px-3 py-1.5 text-sm font-mono text-gray-300">
+          <span className="rounded-lg border border-gray-200 bg-gray-100 px-3 py-1.5 text-sm font-mono text-gray-600 dark:border-gray-800 dark:bg-gray-900/50 dark:text-gray-300">
             {truncated}
           </span>
           <button
             onClick={onDisconnect}
-            className="p-2 rounded-lg text-gray-500 hover:text-gray-200 hover:bg-gray-800/50 transition-colors"
+            className="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-200/50 dark:hover:text-gray-200 dark:hover:bg-gray-800/50 transition-colors"
           >
             <LogOut className="h-4 w-4" />
           </button>

@@ -19,11 +19,15 @@ import {
   Shield,
   Activity,
   ArrowLeft,
+  Sun,
+  Moon,
 } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
 
 type View = "home" | "search" | "create" | "testing" | "roles" | "events";
 
 export function Dashboard() {
+  const { theme, toggle: toggleTheme } = useTheme();
   const wallet = useWallet();
   const pharma = usePharmaChain(
     wallet.signer,
@@ -90,9 +94,9 @@ export function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 animate-fade-in">
+    <div className="min-h-screen bg-[#f0f1f3] text-gray-900 dark:bg-gray-950 dark:text-gray-100 animate-fade-in">
       {/* ── Header — matches landing nav ──────────────────────────────── */}
-      <header className="sticky top-0 z-40 border-b border-gray-800/50 bg-gray-950/80 backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/90 backdrop-blur-md shadow-sm dark:border-gray-800/50 dark:bg-gray-950/80 dark:shadow-none">
         <div className="max-w-6xl mx-auto flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-2">
             <Pill className="h-5 w-5 text-emerald-400" />
@@ -116,6 +120,13 @@ export function Dashboard() {
             {pharma.rolesLoading && (
               <Loader2 className="h-4 w-4 animate-spin text-gray-500" />
             )}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-200/50 dark:hover:text-gray-200 dark:hover:bg-gray-800/50 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
             <WalletConnect
               address={wallet.address}
               isConnected={wallet.isConnected}
@@ -134,13 +145,13 @@ export function Dashboard() {
           <div className="flex flex-col items-center justify-center gap-3 py-20 text-center">
             <AlertCircle className="h-10 w-10 text-red-400" />
             <h2 className="text-lg font-semibold">Contract Not Configured</h2>
-            <p className="text-sm text-gray-400 max-w-md">
+            <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md">
               Set{" "}
-              <code className="bg-gray-800 px-1.5 py-0.5 rounded text-xs">
+              <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">
                 VITE_CONTRACT_ADDRESS
               </code>{" "}
               in your{" "}
-              <code className="bg-gray-800 px-1.5 py-0.5 rounded text-xs">
+              <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">
                 frontend/.env
               </code>{" "}
               file and restart the dev server.
@@ -151,7 +162,7 @@ export function Dashboard() {
         /* ── Connected app ────────────────────────────────────────────── */
         <div className="flex flex-col min-h-[calc(100vh-4rem)]">
           {/* ── Navigation tabs ───────────────────────────────────────── */}
-          <nav className="border-b border-gray-800/50 bg-gray-950/50">
+          <nav className="border-b border-gray-200 bg-white/50 dark:border-gray-800/50 dark:bg-gray-950/50">
             <div className="max-w-6xl mx-auto flex items-center gap-1 overflow-x-auto scrollbar-thin px-6 py-1">
               {visibleNavItems.map((item) => (
                 <button
@@ -160,7 +171,7 @@ export function Dashboard() {
                   className={`flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-lg transition-all whitespace-nowrap ${
                     currentView === item.id
                       ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-                      : "text-gray-400 hover:text-gray-200 hover:bg-gray-800/50"
+                      : "text-gray-500 hover:text-gray-700 hover:bg-gray-200/50 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800/50"
                   }`}
                 >
                   <item.icon className="h-4 w-4" />
@@ -211,7 +222,7 @@ export function Dashboard() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setCurrentView("home")}
-                    className="text-gray-500 hover:text-gray-200 transition-colors"
+                    className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                   >
                     <ArrowLeft className="h-5 w-5" />
                   </button>
@@ -247,7 +258,7 @@ export function Dashboard() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setCurrentView("home")}
-                    className="text-gray-500 hover:text-gray-200 transition-colors"
+                    className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                   >
                     <ArrowLeft className="h-5 w-5" />
                   </button>
@@ -267,7 +278,7 @@ export function Dashboard() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setCurrentView("home")}
-                    className="text-gray-500 hover:text-gray-200 transition-colors"
+                    className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                   >
                     <ArrowLeft className="h-5 w-5" />
                   </button>
@@ -284,7 +295,7 @@ export function Dashboard() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setCurrentView("home")}
-                    className="text-gray-500 hover:text-gray-200 transition-colors"
+                    className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                   >
                     <ArrowLeft className="h-5 w-5" />
                   </button>
