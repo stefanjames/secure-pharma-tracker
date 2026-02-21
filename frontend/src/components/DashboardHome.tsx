@@ -85,7 +85,7 @@ const GETTING_STARTED_STEPS = [
 
 export function DashboardHome({
   roles,
-  address,
+  address: _address,
   contract,
   getBatch,
   getBatchCount,

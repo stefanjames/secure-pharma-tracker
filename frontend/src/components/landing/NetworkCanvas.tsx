@@ -22,7 +22,7 @@ export function NetworkCanvas() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    let animId: number;
+    let animId: number = 0;
     const nodes: Node[] = [];
     const NODE_COUNT = 60;
     const CONNECT_DIST = 150;

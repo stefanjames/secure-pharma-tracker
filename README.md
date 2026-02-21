@@ -2,6 +2,8 @@
 
 An Ethereum-based decentralized application for tracking pharmaceutical batches from manufacture through quality assurance to regulatory approval. Built with Solidity, React, TypeScript, and Hardhat.
 
+**[Live App Demo](https://pharma-chain-dapp.vercel.app)**
+
 ### Landing Page
 ![PharmaChain Landing Page](screenshots/landing_page.png)
 
